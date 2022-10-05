@@ -13,6 +13,14 @@ function createIframeElement(contents) {
     ifrDoc.body.appendChild(elem);
 }
 
+// Checks if the websites the learner portal, if so it gives you the password.
+
+var url = window.location.href;
+if (url = "https://www.lifetechacademy.org/learner-portal/") {
+   document.createElement(`<p id="demo">`);
+   document.getElementById("demo").innerHTML = r;
+} else {
+
 // Style
 
 createIframeElement('<style>.hacks { background-color: #1d7186; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; font-family: Arial, Helvetica, sans-serif; border-radius: 8px; transition-duration: 0.4s; } .hacks:hover { background-color: #6BC5DB; /* Teal */ color: white; }</style>');
@@ -24,3 +32,5 @@ createIframeElement(`<button class="hacks" onclick="let array = API.FrameChain.f
 // Button 2
 
 createIframeElement(`<button class="hacks" onclick="let array = API.FrameChain.frameStatus; for (var i = 0; i < array.length; i++) { if (array[i] == 'incomplete') { array[i] = 'complete'; } } API.FrameChain.frameStatus = array;">Auto Completion (WIP)</button>`);
+
+}
